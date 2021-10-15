@@ -1,0 +1,7 @@
+[part="overlay"] {
+    box-shadow: var(--breeze-overlay-shadow);
+}
+
+[part="content"] {
+    padding: 0;
+}

@@ -1,0 +1,11 @@
+:host {
+    background-color: var(--_lumo-button-background-color, var(--lumo-primary-color-10pct));
+}
+
+:host([theme~="error"]) {
+    background-color: var(--lumo-error-color-10pct);
+}
+
+:host([theme~="success"]) {
+    background-color: var(--lumo-success-color-10pct);
+}

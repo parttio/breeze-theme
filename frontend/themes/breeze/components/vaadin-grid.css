@@ -1,0 +1,24 @@
+:host {
+}
+
+[part="cell header-cell"] {
+    background-color: var(--breeze-grid-header-background);
+    text-transform: uppercase;
+    color: var(--lumo-secondary-text-color);
+}
+
+[part~="header-cell"] ::slotted(vaadin-grid-cell-content) {
+    font-size: var(--lumo-font-size-xs);
+    line-height: 1.6;
+}
+
+:host([theme~="row-stripes"]) [part~="row"]:not([odd]) [part~="body-cell"],
+:host([theme~="row-stripes"]) [part~="row"]:not([odd]) [part~="details-cell"] {
+    background-image: none;
+}
+
+:host([theme~="row-stripes"]) [part~="row"] [part~="body-cell"],
+:host([theme~="row-stripes"]) [part~="row"] [part~="details-cell"] {
+    background-image: linear-gradient(var(--breeze-grid-row-stripe), var(--breeze-grid-row-stripe));
+    background-repeat: repeat-x;
+}

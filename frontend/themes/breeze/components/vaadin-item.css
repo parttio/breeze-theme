@@ -1,0 +1,8 @@
+:host([selected]) {
+    background-color: var(--lumo-primary-color);
+    color: var(--lumo-primary-contrast-color);
+}
+
+:host([tabindex])::before {
+    color: var(--lumo-primary-contrast-color);
+}

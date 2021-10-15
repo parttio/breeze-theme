@@ -1,0 +1,42 @@
+@import "field-label.css";
+
+[part="input-field"] {
+  box-shadow: var(--breeze-field-border), var(--breeze-field-shadow);
+  background-color: var(--lumo-base-color);
+  color: var(--breeze-field-color);
+}
+
+:host([focus-ring]) [part="input-field"] {
+  box-shadow: 0 0 0 2px var(--lumo-primary-color-50pct), inset 0 0 0 1px var(--lumo-primary-color);
+}
+
+:host([invalid]) [part="input-field"] {
+  background-color: var(--lumo-error-color-5pct);
+  box-shadow: inset 0 0 0 1px var(--lumo-error-color);
+}
+
+:host([invalid][focus-ring]) [part="input-field"] {
+  box-shadow: 0 0 0 2px var(--lumo-error-color);
+}
+
+:host([invalid]) [part="input-field"]::after {
+  background-color: var(--lumo-error-color-25pct);
+}
+
+[part="input-field"]::after {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px var(--lumo-contrast-50pct);
+}
+
+:host(:hover:not([readonly]):not([focused])) [part="input-field"]::after {
+  opacity: 0.5;
+}
+
+:host([focused]:not([invalid])) [part="input-field"] {
+  --breeze-field-border: inset 0 0 0 1px var(--lumo-primary-color-50pct);
+}
+
+[part="label"] {
+  color: var(--breeze-label-color);
+}
+

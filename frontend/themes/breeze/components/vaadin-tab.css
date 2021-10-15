@@ -1,0 +1,8 @@
+:host {
+    color: var(--lumo-body-text-color);
+}
+
+:host::before, :host::after {
+    width: 85%;
+    border-radius: 0;
+}

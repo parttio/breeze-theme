@@ -1,0 +1,5 @@
+[part="label"],
+:host(:hover:not([readonly]):not([focused])) [part="label"] {
+    color: var(--breeze-label-color);
+}
+
