@@ -28,6 +28,20 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <scm>
+        <url>https://github.com/parttio/breeze-theme</url>
+        <connection>scm:git:git://github.com/parttio/breeze-theme.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/parttio/breeze-theme.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/mstahv/tinymce-for-flow/issues</url>
+    </issueManagement>
+
+
     <dependencyManagement>
         <dependencies>
             <dependency>

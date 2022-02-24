@@ -1,6 +1,6 @@
 # Breeze theme for Vaadin
 
-Breeze is build on top of Lumo and heavily inspired by visual style of TailwindUI. It can be used in light or dark mode and contains a custom palette for Vaadin Charts.
+Breeze is built on top of Lumo and heavily inspired by visual style of [TailwindUI](https://tailwindui.com/). It can be used in light or dark mode and contains a custom palette for Vaadin Charts.
 
 To install this add-on, check out the latest version and Maven/Gradle dependency snippets from the [Directory](https://vaadin.com/directory).
 
