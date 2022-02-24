@@ -43,8 +43,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Oceania" values="[2, 2, 2, 6, 13, 30, 46]" unit="Millions">
             </vaadin-chart-series>
           </vaadin-chart>
-        </section>       
-        
+        </section>
+
         <section>
           <h3>Area Range</h3>
           <!--dom-bind>
@@ -68,8 +68,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/temperature-date-min-max.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>   
-             
+        </section>
+
         <section>
           <h3>Area Spline</h3>
           <vaadin-chart type="areaspline" title="Average fruit consumption during one week" categories='["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]' additional-options='{
@@ -97,8 +97,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Jane" values="[1, 3, 4, 3, 3, 5, 4]" unit="Fruit units">
             </vaadin-chart-series>
           </vaadin-chart>
-        </section> 
-               
+        </section>
+
         <section>
           <h3>Area Split Range</h3>
           <!--dom-bind>
@@ -113,8 +113,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/temperature-date-min-max.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section> 
-               
+        </section>
+
         <section>
           <h3>Bar</h3>
           <vaadin-chart type="bar" title="Historic World Population by Region" subtitle='Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>' categories='["Africa", "America", "Asia", "Europe", "Oceania"]' additional-options='{
@@ -145,8 +145,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Year 2016" values="[1216, 1001, 4436, 738, 40]">
             </vaadin-chart-series>
           </vaadin-chart>
-        </section>  
-              
+        </section>
+
         <section>
           <h3>Box Plot</h3>
           <vaadin-chart type="boxplot" title="Box Plot Example" categories='["1", "2", "3", "4", "5"]' no-legend tooltip additional-options='{
@@ -187,8 +187,8 @@ export class ChartsView extends LitElement {
           }'>
             </vaadin-chart-series>
           </vaadin-chart>
-        </section> 
-              
+        </section>
+
         <section>
           <h3>Bubble</h3>
           <vaadin-chart type="bubble" title="Vaadin Charts Bubbles" tooltip>
@@ -197,8 +197,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Negative bubbles hidden" values="[[13, 30, 10], [23, 20, -10], [23, 40, 10]]" additional-options='{"displayNegative": false}'>
             </vaadin-chart-series>
           </vaadin-chart>
-        </section> 
-              
+        </section>
+
         <section>
           <h3>Bullet</h3>
           <!--dom-module id="bullet-theme" theme-for="vaadin-chart">
@@ -260,7 +260,7 @@ export class ChartsView extends LitElement {
                       }
               }'></vaadin-chart-series>
           </vaadin-chart>
-          
+
           <vaadin-chart type="bullet" theme="steps" style="height: 85px;" categories='["<span class=\\"hc-cat-title\\">Profit</span><br/>%"]' additional-options='{"chart": {
                       "inverted": true,
                       "marginLeft": 135
@@ -297,7 +297,7 @@ export class ChartsView extends LitElement {
                       }
                   }'></vaadin-chart-series>
           </vaadin-chart>
-      
+
           <vaadin-chart type="bullet" theme="steps" style="height: 85px;" categories='["<span class=\\"hc-cat-title\\">New Customers</span><br/>Count"]' additional-options='{"chart": {
                       "inverted": true,
                       "marginLeft": 135
@@ -331,8 +331,8 @@ export class ChartsView extends LitElement {
                       }
                   }'></vaadin-chart-series>
           </vaadin-chart-->
-        </section> 
-              
+        </section>
+
         <section>
           <h3>Candlestick</h3>
             <!--dom-bind>
@@ -355,8 +355,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/aapl-date-ohlc.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>     
-          
+        </section>
+
         <section>
           <h3>Column</h3>
           <vaadin-chart type="column" title="Monthly Average Rainfall" subtitle="Source: WorldClimate.com" categories='["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -383,8 +383,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Berlin" values="[42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]">
             </vaadin-chart-series>
           </vaadin-chart>
-        </section>   
-            
+        </section>
+
         <section>
           <h3>Column Range</h3>
           <!--dom-bind>
@@ -403,8 +403,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/temperature-date-min-max.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>  
-        
+        </section>
+
         <vaadin-chart title="Monthly Rainfall" theme="error-bar" categories='["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]' additional-options='{
           "yAxis": {
@@ -432,7 +432,7 @@ export class ChartsView extends LitElement {
         }' values="[[48, 51], [68, 73], [92, 110], [128, 136], [140, 150], [171, 179], [135, 143], [142, 149], [204, 220], [189, 199], [95, 110], [52, 56]]">
           </vaadin-chart-series>
         </vaadin-chart>
-    
+
         <vaadin-chart type="areaspline" title="Average fruit consumption during one week" categories='["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]' additional-options='{
           "tooltip": {
             "shared": true,
@@ -460,7 +460,7 @@ export class ChartsView extends LitElement {
         }]'>
           </vaadin-chart-series>
         </vaadin-chart>
-             
+
         <section>
           <h3>Funnel</h3>
           <vaadin-chart type="funnel"
@@ -493,8 +493,8 @@ export class ChartsView extends LitElement {
             ]'>
             </vaadin-chart-series>
           </vaadin-chart>
-        </section>   
-            
+        </section>
+
         <section>
           <h3>Gauges</h3>
           <!--dom-module id="speedometer-theme" theme-for="vaadin-chart">
@@ -504,31 +504,31 @@ export class ChartsView extends LitElement {
                   stroke: var(--vaadin-charts-color-positive, #15C15D);
                   fill: var(--vaadin-charts-color-positive, #15C15D);
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-plot-band.band-1 {
                   fill: var(--vaadin-charts-color-8, #FDA253);
                   stroke: var(--vaadin-charts-color-8, #FDA253);
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-plot-band.band-2 {
                   stroke: var(--vaadin-charts-color-negative, #E24932);
                   fill: var(--vaadin-charts-color-negative, #E24932);
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-plot-band {
                   fill-opacity: 1;
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-tick {
                   stroke: var(--vaadin-charts-grid-line);
                   stroke-width: 2;
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-minor-tick {
                   stroke: var(--vaadin-charts-grid-line);
                   stroke-width: 1;
                 }
-      
+
                 :host([theme~="speedometer"]) .highcharts-grid-line,
                 :host([theme~="speedometer"]) .highcharts-minor-grid-line {
                   stroke: none;
@@ -578,31 +578,31 @@ export class ChartsView extends LitElement {
             }
           }'></vaadin-chart-series>
           </vaadin-chart>
-      
+
           <!--dom-module id="speedometer-dual-theme" theme-for="vaadin-chart">
             <template>
               <style include="vaadin-chart-default-theme">
                 :host([theme~="speedometer-dual"]) .highcharts-yaxis .highcharts-axis-line {
                   stroke-width: 2;
                 }
-      
+
                 :host([theme~="speedometer-dual"]) .kmh .highcharts-axis-line,
                 :host([theme~="speedometer-dual"]) .kmh .highcharts-tick,
                 :host([theme~="speedometer-dual"]) .kmh .highcharts-minor-tick {
                   stroke: var(--vaadin-charts-color-0, #5AC2F7);
                 }
-      
+
                 :host([theme~="speedometer-dual"]) .mph .highcharts-axis-line,
                 :host([theme~="speedometer-dual"]) .mph .highcharts-tick,
                 :host([theme~="speedometer-dual"]) .mph .highcharts-minor-tick {
                   stroke: var(--vaadin-charts-color-1, #1676F3);
                 }
-      
+
                 :host([theme~="speedometer-dual"]) .highcharts-grid-line,
                 :host([theme~="speedometer-dual"]) .highcharts-minor-grid-line {
                   stroke: none;
                 }
-      
+
                 :host([theme~="speedometer-dual"]) .highcharts-pivot {
                   fill: var(--lumo-contrast, hsl(214, 35%, 15%));
                   stroke: var(--lumo-contrast, hsl(214, 35%, 15%));
@@ -654,8 +654,8 @@ export class ChartsView extends LitElement {
             }
           }'></vaadin-chart-series>
           </vaadin-chart>
-        </section>  
-             
+        </section>
+
         <section>
           <h3>Heatmap</h3>
           <vaadin-chart type="heatmap" title="Sales per employee per weekday" tooltip additional-options='{
@@ -665,18 +665,18 @@ export class ChartsView extends LitElement {
                 "Leon", "Anna", "Tim", "Laura"
               ]
             },
-      
+
             "yAxis": {
               "categories": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
               "title": null
             },
-      
+
             "colorAxis": {
               "min": 0,
               "minColor": "#FFFFFF",
               "maxColor": "#1676f3"
             },
-      
+
             "legend": {
               "align": "right",
               "layout": "vertical",
@@ -706,8 +706,8 @@ export class ChartsView extends LitElement {
             }
           }'></vaadin-chart-series>
           </vaadin-chart>
-        </section>    
-                 
+        </section>
+
         <section>
           <h3>?</h3>
             <vaadin-chart title="Solar Employment Growth by Sector, 2010-2016" subtitle="Source: thesolarfoundation.com" categories="[2010, 2011, 2012, 2013, 2014, 2015, 206, 2017]" additional-options='{
@@ -723,8 +723,8 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Project Development" unit="Number of Employees" values="[null, null, 7988, 12169, 15112, 22452, 34400, 34227]"></vaadin-chart-series>
             <vaadin-chart-series title="Other" unit="Number of Employees" values="[12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]"></vaadin-chart-series>
           </vaadin-chart>
-        </section>   
-                  
+        </section>
+
         <section>
           <h3>OHCL</h3>
           <!--dom-bind>
@@ -742,8 +742,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/aapl-date-ohlc.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>  
-                   
+        </section>
+
         <section>
           <h3>Organization</h3>
           <!--vaadin-chart type="organization" style="height: 600px;" title="Acme organization chart" additional-options='{"chart": {
@@ -846,8 +846,8 @@ export class ChartsView extends LitElement {
             "nodeWidth": 65
             }'></vaadin-chart-series>
           </vaadin-chart-->
-        </section>  
-                   
+        </section>
+
         <section>
           <h3>Pie</h3>
           <vaadin-chart type="pie" title="Browser market shares in January, 2018" tooltip additional-options='{
@@ -906,8 +906,8 @@ export class ChartsView extends LitElement {
               }
           ]'></vaadin-chart-series>
           </vaadin-chart>
-        </section>  
-                   
+        </section>
+
         <section>
           <h3>Polar</h3>
           <vaadin-chart title="Polar Chart" polar additional-options='{
@@ -940,7 +940,7 @@ export class ChartsView extends LitElement {
             </vaadin-chart-series>
           </vaadin-chart>
         </section>
-                     
+
         <section>
           <h3>Polygon</h3>
           <!--dom-module id="polygon" theme-for="vaadin-chart">
@@ -988,8 +988,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/height-weight.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>  
-                   
+        </section>
+
         <section>
           <h3>Pyramid</h3>
           <vaadin-chart type="pyramid" title="Sales pyramid" no-legend additional-options='{
@@ -1014,8 +1014,8 @@ export class ChartsView extends LitElement {
           ]'>
             </vaadin-chart-series>
           </vaadin-chart>
-        </section>  
-                   
+        </section>
+
         <section>
           <h3>Scatter</h3>
           <!--dom-module id="scatter" theme-for="vaadin-chart">
@@ -1026,13 +1026,13 @@ export class ChartsView extends LitElement {
                   fill: rgba(223, 83, 83, .5);
                   stroke: rgba(223, 83, 83, .5);
                 }
-      
+
                 :host([theme~="scatter"]) .maleSeries,
                 :host([theme~="scatter"]) .maleSeries .highcharts-point {
                   fill: rgba(119, 152, 191, .5);
                   stroke: rgba(119, 152, 191, .5);
                 }
-      
+
                 :host([theme~="scatter"]) .highcharts-legend-box {
                   fill: #FFF;
                   stroke-width: 1px;
@@ -1083,8 +1083,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/male-height-weight.json" last-response="{{male}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>   
-                        
+        </section>
+
         <section>
           <h3>Solid gauge</h3>
           <vaadin-chart title="Speed" type="solidgauge" tooltip additional-options='{
@@ -1118,7 +1118,7 @@ export class ChartsView extends LitElement {
           }'>
             </vaadin-chart-series>
           </vaadin-chart>
-          
+
           <div style="display: flex; flex-direction: row;">
             <vaadin-chart title="Progress" type="solidgauge" additional-options='{
               "pane": {
@@ -1148,7 +1148,7 @@ export class ChartsView extends LitElement {
             }'>
               </vaadin-chart-series>
             </vaadin-chart>
-      
+
             <vaadin-chart title="Progress" type="solidgauge" additional-options='{
             "pane": {
               "center": ["50%","50%"],
@@ -1177,7 +1177,7 @@ export class ChartsView extends LitElement {
           }'>
               </vaadin-chart-series>
             </vaadin-chart>
-      
+
             <vaadin-chart title="Progress" type="solidgauge" additional-options='{
             "pane": {
               "center": ["50%","50%"],
@@ -1207,8 +1207,8 @@ export class ChartsView extends LitElement {
               </vaadin-chart-series>
             </vaadin-chart>
           </div>
-        </section>      
-                     
+        </section>
+
         <section>
           <h3>Spiderweb</h3>
           <!--dom-module id="spiderweb-theme" theme-for="vaadin-chart">
@@ -1217,7 +1217,7 @@ export class ChartsView extends LitElement {
                 :host([theme~="spiderweb"]) .highcharts-xaxis .highcharts-axis-line {
                   stroke-width: 0;
                 }
-      
+
                 :host([theme~="spiderweb"]) .highcharts-xaxis-grid .highcharts-grid-line {
                   stroke-width: 1px;
                 }
@@ -1242,7 +1242,7 @@ export class ChartsView extends LitElement {
             <vaadin-chart-series title="Actual Spending" values="[50000, 39000, 42000, 31000, 26000, 14000]"></vaadin-chart-series>
           </vaadin-chart>
         </section>
-                           
+
         <section>
           <h3>Spline</h3>
           <!--dom-bind>
@@ -1257,8 +1257,8 @@ export class ChartsView extends LitElement {
               <iron-ajax url="./demo-data/aapl-date-price.json" last-response="{{data}}" auto></iron-ajax>
             </template>
           </dom-bind-->
-        </section>  
-                         
+        </section>
+
         <section>
           <h3>Timeline</h3>
           <!--vaadin-chart type="timeline" title="Timeline of Space Exploration" subtitle='Info source: <a href="https://en.wikipedia.org/wiki/Timeline_of_space_exploration">Wikipedia.org</a>' tooltip additional-options='{
@@ -1297,8 +1297,8 @@ export class ChartsView extends LitElement {
               }
             ]'></vaadin-chart-series>
           </vaadin-chart-->
-        </section>  
-                         
+        </section>
+
         <section>
           <h3>Treemap</h3>
           <vaadin-chart type="treemap" title="Fruit consumption" tooltip>
@@ -1369,7 +1369,7 @@ export class ChartsView extends LitElement {
           }'></vaadin-chart-series>
           </vaadin-chart>
         </section>
-                           
+
         <section>
           <h3>Waterfall</h3>
           <!--dom-module id="waterfall" theme-for="vaadin-chart">
@@ -1378,20 +1378,20 @@ export class ChartsView extends LitElement {
                 :host([theme~="waterfall"]) .highcharts-data-labels text {
                   fill: var(--lumo-contrast, hsl(214, 35%, 15%));
                 }
-      
+
                 :host([theme~="waterfall"]) .highcharts-waterfall-series .highcharts-point {
                   fill: var(--vaadin-charts-color-positive);
                   stroke-width: 0px;
                 }
-      
+
                 :host([theme~="waterfall"]) .highcharts-waterfall-series .highcharts-negative {
                   fill: var(--vaadin-charts-color-negative);
                 }
-      
+
                 :host([theme~="waterfall"]) .highcharts-waterfall-series .highcharts-sum {
                   fill: var(--vaadin-charts-color-0);
                 }
-      
+
                 :host([theme~="waterfall"]) .highcharts-waterfall-series .highcharts-intermediate-sum {
                   fill: var(--vaadin-charts-color-8);
                 }
@@ -1422,7 +1422,7 @@ export class ChartsView extends LitElement {
           }
         ]'></vaadin-chart-series>
           </vaadin-chart>
-        </section>                   
+        </section>
       </main>
     `;
   }

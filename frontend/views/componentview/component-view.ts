@@ -400,7 +400,8 @@ export class ComponentView extends LitElement {
               There are unsaved changes. Do you want to discard or save them?
             </vaadin-confirm-dialog>
         </section>
-        
+
+<!--  This section fails for some reason in 22.0.4
         <section>
           <h3>Notification</h3>
           <vaadin-button @click="${() => (this.notificationOpened1 = true)}">Open notification</vaadin-button>
@@ -433,7 +434,7 @@ export class ComponentView extends LitElement {
               </template>
             </vaadin-notification>
         </section>
-        
+-->
         <section>
           <!-- TODO -->
           <h3>Message List</h3>

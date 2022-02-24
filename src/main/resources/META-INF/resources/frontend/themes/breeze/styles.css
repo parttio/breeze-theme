@@ -1,0 +1,294 @@
+@import url('lumo-css-framework/all-classes.css');
+
+html {
+    /* Lumo variables */
+    --lumo-shade-5pct: rgba(54, 61, 93, 0.03);
+    --lumo-shade-10pct: rgba(54, 61, 93, 0.07);
+    --lumo-shade-20pct: rgba(54, 61, 93, 0.16);
+    --lumo-shade-30pct: rgba(54, 61, 93, 0.28);
+    --lumo-shade-40pct: rgba(54, 66, 93, 0.4);
+    --lumo-shade-50pct: rgba(54, 66, 83, 0.5);
+    --lumo-shade-60pct: rgba(54, 61, 73, 0.6);
+    --lumo-shade-70pct: rgba(54, 61, 73, 0.7);
+    --lumo-shade-80pct: rgba(54, 61, 73, 0.8);
+    --lumo-shade-90pct: rgba(54, 61, 73, 0.9);
+    --lumo-shade: hsl(220, 15%, 25%);
+    --lumo-header-text-color: hsl(221, 39%, 11%);
+    --lumo-body-text-color: hsl(220, 9%, 35%);
+    --lumo-secondary-text-color: var(--lumo-contrast-70pct);
+    --lumo-tertiary-text-color: var(--lumo-contrast-50pct);
+    --lumo-disabled-text-color: var(--lumo-contrast-30pct);
+    --lumo-primary-color: hsl(241, 72%, 59%);
+    --lumo-primary-color-50pct: hsla(241, 72%, 59%, 0.5);
+    --lumo-primary-color-10pct: hsla(241, 72%, 59%, 0.1);
+    --lumo-primary-text-color: hsl(242, 55%, 51%);
+    --lumo-error-color: hsl(358, 71%, 51%);
+    --lumo-error-color-50pct: hsla(358, 71%, 51%, 0.50);
+    --lumo-error-color-25pct: hsla(358, 71%, 51%, 0.25);
+    --lumo-error-color-10pct: hsla(358, 71%, 51%, 0.10);
+    --lumo-error-color-5pct: #FDF7F7;
+    --lumo-error-text-color: hsl(358, 71%, 51%);
+    --lumo-success-color: hsl(159, 68%, 43%);
+    --lumo-success-color-50pct: hsla(159, 68%, 43%, 0.55);
+    --lumo-success-color-10pct: hsla(159, 68%, 43%, 0.12);
+    --lumo-success-text-color: hsl(161, 75%, 27%);
+
+    --lumo-border-radius: 0.375rem;
+
+    /* Breeze theme variables */
+    --breeze-label-color: hsl(217, 19%, 27%);
+    --breeze-field-color: hsl(217, 19%, 27%);
+    --breeze-field-border: inset 0 0 0 1px var(--lumo-contrast-20pct);
+    --breeze-field-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    --breeze-overlay-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --breeze-grid-header-background: #F9F9FA;
+    --breeze-grid-row-stripe: hsla(220, 15%, 25%, 0.03);
+
+    /* Vaadin charts colors */
+    --vaadin-charts-color-0: #443FC7;
+    --vaadin-charts-color-1: #646BEE;
+    --vaadin-charts-color-2: #BC1E5E;
+    --vaadin-charts-color-3: #EA4C99;
+    --vaadin-charts-color-4: #117858;
+    --vaadin-charts-color-5: #23B883;
+    --vaadin-charts-color-6: #B2531A;
+    --vaadin-charts-color-7: #F39D2A;
+    --vaadin-charts-color-8: #B71F23;
+    --vaadin-charts-color-9: #ED4649;
+
+    /* Root element configuration */
+    background-color: var(--lumo-shade-5pct);
+}
+
+[theme~="dark"] {
+    --lumo-base-color: hsl(220, 15%, 15%);
+    --lumo-shade-5pct: rgba(54, 61, 73, 0.05);
+    --lumo-shade-10pct: rgba(54, 61, 73, 0.1);
+    --lumo-shade-20pct: rgba(54, 61, 73, 0.2);
+    --lumo-shade-30pct: rgba(54, 61, 73, 0.3);
+    --lumo-shade-40pct: rgba(54, 61, 73, 0.4);
+    --lumo-shade-50pct: rgba(54, 61, 73, 0.5);
+    --lumo-shade-60pct: rgba(54, 61, 73, 0.6);
+    --lumo-shade-70pct: rgba(54, 61, 73, 0.7);
+    --lumo-shade-80pct: rgba(54, 61, 73, 0.8);
+    --lumo-shade-90pct: rgba(54, 61, 73, 0.9);
+    --lumo-shade: hsl(220, 15%, 25%);
+    --lumo-primary-color: hsl(241, 72%, 62%);
+    --lumo-primary-color-50pct: hsla(241, 72%, 62%, 0.5);
+    --lumo-primary-color-10pct: hsla(241, 72%, 66%, 0.1);
+    --lumo-primary-text-color: hsl(242, 55%, 66%);
+    --lumo-error-color: hsl(358, 71%, 60%);
+    --lumo-error-color-50pct: hsla(358, 71%, 60%, 0.50);
+    --lumo-error-color-25pct: hsla(358, 71%, 60%, 0.25);
+    --lumo-error-color-10pct: hsla(358, 71%, 60%, 0.10);
+    --lumo-error-color-5pct: #342D34;
+    --lumo-error-text-color: hsl(358, 71%, 60%);
+    --lumo-success-color: hsl(159, 68%, 46%);
+    --lumo-success-color-50pct: hsla(159, 68%, 46%, 0.55);
+    --lumo-success-color-10pct: hsla(159, 68%, 46%, 0.12);
+    --lumo-success-text-color: hsl(161, 75%, 69%);
+
+    --breeze-label-color: hsl(217, 19%, 90%);
+    --breeze-field-color: hsl(217, 19%, 90%);
+    --breeze-field-border: inset 0 0 0 1px var(--lumo-contrast-20pct);
+    --breeze-grid-header-background: #252931;
+    --breeze-grid-row-stripe: hsla(220, 15%, 25%, 0.35);
+}
+
+html[theme="dark"] {
+    background-color: hsl(220, 15%, 14%);
+}
+
+/* Badges */
+[theme~="badge"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.4em calc(0.5em + var(--lumo-border-radius-s) / 4);
+    color: var(--lumo-primary-text-color);
+    background-color: var(--lumo-primary-color-10pct);
+    border-radius: var(--lumo-border-radius-s);
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-s);
+    line-height: 1;
+    font-weight: 500;
+    text-transform: initial;
+    letter-spacing: initial;
+    min-width: calc(var(--lumo-line-height-xs) * 1em + 0.45em);
+}
+
+/* Ensure proper vertical alignment */
+[theme~="badge"]::before {
+    display: inline-block;
+    content: "\2003";
+    width: 0;
+}
+
+[theme~="badge"][theme~="small"] {
+    font-size: var(--lumo-font-size-xxs);
+    line-height: 1;
+}
+
+/* Colors */
+
+[theme~="badge"][theme~="success"] {
+    color: var(--lumo-success-text-color);
+    background-color: var(--lumo-success-color-10pct);
+}
+
+[theme~="badge"][theme~="error"] {
+    color: var(--lumo-error-text-color);
+    background-color: var(--lumo-error-color-10pct);
+}
+
+[theme~="badge"][theme~="contrast"] {
+    color: var(--lumo-contrast-80pct);
+    background-color: var(--lumo-contrast-5pct);
+}
+
+/* Primary */
+
+[theme~="badge"][theme~="primary"] {
+    color: var(--lumo-primary-contrast-color);
+    background-color: var(--lumo-primary-color);
+}
+
+[theme~="badge"][theme~="success"][theme~="primary"] {
+    color: var(--lumo-success-contrast-color);
+    background-color: var(--lumo-success-color);
+}
+
+[theme~="badge"][theme~="error"][theme~="primary"] {
+    color: var(--lumo-error-contrast-color);
+    background-color: var(--lumo-error-color);
+}
+
+[theme~="badge"][theme~="contrast"][theme~="primary"] {
+    color: var(--lumo-base-color);
+    background-color: var(--lumo-contrast);
+}
+
+/* Links */
+
+[theme~="badge"][href]:hover {
+    text-decoration: none;
+}
+
+/* Icon */
+
+[theme~="badge"] iron-icon {
+    margin: -0.25em 0;
+    --iron-icon-width: 1.5em;
+    --iron-icon-height: 1.5em;
+}
+
+[theme~="badge"] iron-icon:first-child {
+    margin-left: -0.375em;
+}
+
+[theme~="badge"] iron-icon:last-child {
+    margin-right: -0.375em;
+}
+
+[theme~="badge"][icon] {
+    min-width: 0;
+    padding: 0;
+    font-size: 1rem;
+    --iron-icon-width: var(--lumo-icon-size-m);
+    --iron-icon-height: var(--lumo-icon-size-m);
+}
+
+[theme~="badge"][icon][theme~="small"] {
+    --iron-icon-width: var(--lumo-icon-size-s);
+    --iron-icon-height: var(--lumo-icon-size-s);
+}
+
+/* Empty */
+
+[theme~="badge"]:not([icon]):empty {
+    min-width: 0;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--lumo-primary-color);
+}
+
+[theme~="badge"][theme~="small"]:not([icon]):empty {
+    width: 0.75em;
+    height: 0.75em;
+}
+
+[theme~="badge"][theme~="contrast"]:not([icon]):empty {
+    background-color: var(--lumo-contrast);
+}
+
+[theme~="badge"][theme~="success"]:not([icon]):empty {
+    background-color: var(--lumo-success-color);
+}
+
+[theme~="badge"][theme~="error"]:not([icon]):empty {
+    background-color: var(--lumo-error-color);
+}
+
+/* Pill */
+
+[theme~="badge"][theme~="pill"] {
+    --lumo-border-radius-s: 1em;
+}
+
+/* RTL specific styles */
+
+[dir="rtl"][theme~="badge"] iron-icon:first-child {
+    margin-right: -0.375em;
+    margin-left: 0;
+}
+
+[dir="rtl"][theme~="badge"] iron-icon:last-child {
+    margin-left: -0.375em;
+    margin-right: 0;
+}
+
+.filters {
+   padding: 1rem 0 1rem 1rem;
+   width: auto !important;
+}
+
+.filters .filter {
+   flex-grow: 1;
+   flex-basis: 33%;
+   margin-right: 1rem;
+   padding: 1rem;
+   border: 1px solid var(--lumo-contrast-10pct);
+   background-color: var(--lumo-base-color);
+}
+
+.filters .filter h4 {
+   margin: 0.25rem 0;
+}
+
+.filters .filter span:first-of-type {
+   color: var(--breeze-label-color);
+   font-weight: 500;
+   font-size: var(--lumo-font-size-s);
+   margin-bottom: 0.25rem;
+}
+
+.filters .filter span[theme~="badge"] {
+   margin-top: 0.25rem;
+   margin-right: 0.25rem;
+}
+
+.editor .editor-head {
+   background-color: var(--lumo-base-color);
+}
+
+.editor .editor-head h2 {
+   margin-top: 0;
+   padding: var(--lumo-space-l) var(--lumo-space-l) var(--lumo-space-s) var(--lumo-space-l);
+}
+
+.editor vaadin-form-layout {
+   padding: var(--lumo-space-l);
+}
