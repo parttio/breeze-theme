@@ -1,0 +1,12 @@
+:host([selected]) {
+    background-color: var(--lumo-primary-color);
+    color: var(--lumo-primary-contrast-color);
+}
+
+:host([selected]:hover) {
+    background-color: var(--lumo-primary-text-color);
+}
+
+:host([selected]) [part="checkmark"]::before {
+    color: var(--lumo-primary-contrast-color);
+}

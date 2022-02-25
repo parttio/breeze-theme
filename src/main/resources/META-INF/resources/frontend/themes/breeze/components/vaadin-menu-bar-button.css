@@ -1,0 +1,4 @@
+:host([theme~='primary'][disabled]) {
+    background-color: var(--lumo-primary-color);
+    opacity: .8;
+}

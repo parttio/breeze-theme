@@ -1,4 +1,4 @@
 [part="overlay"] {
-    --iron-list-items-container_-_border-width: 0;
+    --_vaadin-combo-box-items-container-border-width: 0;
     box-shadow: var(--breeze-overlay-shadow);
 }

@@ -45,6 +45,7 @@ import com.vaadin.flow.component.icon.Icon;
 
 @PageTitle("Employees")
 @Route(value = "master-detail/:samplePersonID?/:action?(edit)", layout = MainLayout.class)
+@CssImport("../src/test/java/com/example/application/styles/master-detail-view.css")
 @Uses(Icon.class)
 public class MasterDetailView extends Div implements BeforeEnterObserver {
 

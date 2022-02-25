@@ -15,9 +15,13 @@
  */
 package com.vaadin.flow.theme;
 
+import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
 @NpmPackage(value = "lumo-css-framework", version = "^4.0.10")
+@JsModule("@vaadin/charts/vaadin-chart-default-theme")
+@CssImport(value = "../src/main/resources/META-INF/resources/frontend/themes/breeze/vaadin-chart.css", themeFor = "vaadin-chart", include = "vaadin-chart-default-theme")
 public class BreezeTheme {
     
 }

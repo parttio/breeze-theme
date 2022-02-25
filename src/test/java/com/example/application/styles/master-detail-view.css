@@ -1,0 +1,43 @@
+/* Custom styles for Master Detail view template */
+.filters {
+    padding: 1rem 0 1rem 1rem;
+    width: auto !important;
+}
+
+.filters .filter {
+    flex-grow: 1;
+    flex-basis: 33%;
+    margin-right: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--lumo-contrast-10pct);
+    background-color: var(--lumo-base-color);
+}
+
+.filters .filter h4 {
+    margin: 0.25rem 0;
+}
+
+.filters .filter span:first-of-type {
+    color: var(--breeze-label-color);
+    font-weight: 500;
+    font-size: var(--lumo-font-size-s);
+    margin-bottom: 0.25rem;
+}
+
+.filters .filter span[theme~="badge"] {
+    margin-top: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.editor .editor-head {
+    background-color: var(--lumo-base-color);
+}
+
+.editor .editor-head h2 {
+    margin-top: 0;
+    padding: var(--lumo-space-l) var(--lumo-space-l) var(--lumo-space-s) var(--lumo-space-l);
+}
+
+.editor vaadin-form-layout {
+    padding: var(--lumo-space-l);
+}

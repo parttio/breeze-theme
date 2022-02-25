@@ -1,9 +1,3 @@
 [part="items"] ::slotted(.vaadin-menu-item) {
     border-radius: 0;
 }
-
-[part="items"] ::slotted(.vaadin-menu-item[menu-item-checked]),
-[part="items"] ::slotted(.vaadin-menu-item[menu-item-checked]:hover) {
-    background-color: var(--lumo-primary-color);
-    color: var(--lumo-primary-contrast-color);
-}

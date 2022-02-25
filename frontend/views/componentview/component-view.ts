@@ -1,10 +1,10 @@
-import {html, LitElement, customElement, state} from 'lit-element';
-import '@polymer/iron-icon/iron-icon';
+import {html, LitElement, render, customElement, state} from 'lit-element';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-checkbox';
 import '@vaadin/vaadin-combo-box';
 import '@vaadin/vaadin-icons';
 import '@vaadin/vaadin-select';
+import {guard} from 'lit/directives/guard.js';
 import '@vaadin/vaadin-text-field/vaadin-email-field';
 import '@vaadin/vaadin-text-field/vaadin-text-area';
 import '@vaadin/vaadin-text-field/vaadin-text-field';
@@ -96,26 +96,26 @@ export class ComponentView extends LitElement {
         <section>
           <h3>Text Field</h3>
           <vaadin-text-field label="Street Address" value="Ruukinkatu 2"></vaadin-text-field>
-          <vaadin-text-field label="Street Address" placeholder="Street or code"></vaadin-text-field>
+          <vaadin-text-field label="Street Address" placeholder="Street or code" required></vaadin-text-field>
           <vaadin-text-field label="Street Address" helper-text="Street or code"></vaadin-text-field>
-          <vaadin-text-field label="Street Address" invalid></vaadin-text-field>
+          <vaadin-text-field label="Street Address" invalid error-message="Not valid"></vaadin-text-field>
           <vaadin-text-field label="Street Address" focused></vaadin-text-field>
           <vaadin-text-field label="Street Address" focused focus-ring></vaadin-text-field>
           <vaadin-text-field label="Street Address" value="Ruukinkatu 2" clear-button-visible>
-            <iron-icon slot="prefix" icon="vaadin:map-marker"></iron-icon>
+            <vaadin-icon slot="prefix" icon="vaadin:map-marker"></vaadin-icon>
           </vaadin-text-field>
         </section>
         
         <section>
           <h3>Text Area</h3>
           <vaadin-text-area label="Street Address" value="Ruukinkatu 2"></vaadin-text-area>
-          <vaadin-text-area label="Street Address" placeholder="Street or code"></vaadin-text-area>
+          <vaadin-text-area label="Street Address" placeholder="Street or code" required></vaadin-text-area>
           <vaadin-text-area label="Street Address" helper-text="Street or code"></vaadin-text-area>
-          <vaadin-text-area label="Street Address" invalid></vaadin-text-area>
+          <vaadin-text-area label="Street Address" invalid error-message="Not valid"></vaadin-text-area>
           <vaadin-text-area label="Street Address" focused></vaadin-text-area>
           <vaadin-text-area label="Street Address" focused focus-ring></vaadin-text-area>
           <vaadin-text-area label="Street Address" value="Ruukinkatu 2" clear-button-visible>
-            <iron-icon slot="prefix" icon="vaadin:map-marker"></iron-icon>
+            <vaadin-icon slot="prefix" icon="vaadin:map-marker"></vaadin-icon>
           </vaadin-text-area>
         </section>
         
@@ -152,7 +152,59 @@ export class ComponentView extends LitElement {
           <vaadin-combo-box label="Browser" .items="${this.comboItems}"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" value="Mozilla Firefox"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" placeholder="Pick one" helper-text="Most common browsers"></vaadin-combo-box>
-          <vaadin-combo-box label="Browser" .items="${this.comboItems}" invalid></vaadin-combo-box>
+          <vaadin-combo-box label="Browser" .items="${this.comboItems}" invalid error-message="Not valid"></vaadin-combo-box>
+          <vaadin-select label="Browser"
+            .renderer="${guard(
+                  [],() => (root: HTMLElement) => render(
+                      html`
+                        <vaadin-list-box>
+                          <vaadin-item value="chrome">Google Chrome</vaadin-item>
+                          <vaadin-item value="edge">Microsoft Edge</vaadin-item>
+                          <vaadin-item value="firefox">Mozilla Firefox</vaadin-item>
+                          <vaadin-item value="safari">Safari</vaadin-item>
+                        </vaadin-list-box>
+                      `, root)
+              )}"
+          ></vaadin-select>
+          <vaadin-select label="Browser" value="firefox"
+            .renderer="${guard(
+        [],() => (root: HTMLElement) => render(
+            html`
+                        <vaadin-list-box>
+                          <vaadin-item value="chrome">Google Chrome</vaadin-item>
+                          <vaadin-item value="edge">Microsoft Edge</vaadin-item>
+                          <vaadin-item value="firefox">Mozilla Firefox</vaadin-item>
+                          <vaadin-item value="safari">Safari</vaadin-item>
+                        </vaadin-list-box>
+                      `, root)
+    )}"
+          ></vaadin-select>
+          <vaadin-select label="Browser" placeholder="Pick one" helper-text="Most common browsers"
+            .renderer="${guard(
+        [],() => (root: HTMLElement) => render(
+            html`
+                        <vaadin-list-box>
+                          <vaadin-item value="chrome">Google Chrome</vaadin-item>
+                          <vaadin-item value="edge">Microsoft Edge</vaadin-item>
+                          <vaadin-item value="firefox">Mozilla Firefox</vaadin-item>
+                          <vaadin-item value="safari">Safari</vaadin-item>
+                        </vaadin-list-box>
+                      `, root)
+    )}"
+          ></vaadin-select>
+          <vaadin-select label="Browser" invalid error-message="Not valid"
+            .renderer="${guard(
+        [],() => (root: HTMLElement) => render(
+            html`
+                        <vaadin-list-box>
+                          <vaadin-item value="chrome">Google Chrome</vaadin-item>
+                          <vaadin-item value="edge">Microsoft Edge</vaadin-item>
+                          <vaadin-item value="firefox">Mozilla Firefox</vaadin-item>
+                          <vaadin-item value="safari">Safari</vaadin-item>
+                        </vaadin-list-box>
+                      `, root)
+    )}"
+          ></vaadin-select>
         </section>
         
         <section>
@@ -170,12 +222,13 @@ export class ComponentView extends LitElement {
             <vaadin-checkbox value="0">Order ID</vaadin-checkbox>
             <vaadin-checkbox value="1">Product name</vaadin-checkbox>
             <vaadin-checkbox value="2">Customer</vaadin-checkbox>
-            <vaadin-checkbox value="3">Status</vaadin-checkbox>
+            <vaadin-checkbox value="3" disabled>Status</vaadin-checkbox>
           </vaadin-checkbox-group>
           <vaadin-radio-group label="Travel class" theme="vertical">
             <vaadin-radio-button value="economy">Economy</vaadin-radio-button>
             <vaadin-radio-button value="business">Business</vaadin-radio-button>
             <vaadin-radio-button value="firstClass">First Class</vaadin-radio-button>
+            <vaadin-radio-button value="firstClass" disabled>Priority</vaadin-radio-button>
           </vaadin-radio-group>
         </section>
         
@@ -198,45 +251,45 @@ export class ComponentView extends LitElement {
             <vaadin-button theme="primary">Primary</vaadin-button>
             <vaadin-button>Secondary</vaadin-button>
             <vaadin-button theme="tertiary">Tertiary</vaadin-button>
-            <vaadin-button theme="primary icon"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="icon"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary icon"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="primary"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Primary</vaadin-button>
-            <vaadin-button>Secondary <iron-icon icon="vaadin:search" slot="suffix"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Tertiary</vaadin-button>
+            <vaadin-button theme="primary icon"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="icon"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary icon"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="primary"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Primary</vaadin-button>
+            <vaadin-button>Secondary <vaadin-icon icon="vaadin:search" slot="suffix"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Tertiary</vaadin-button>
            </div>
            <div>
             <vaadin-button theme="primary error">Primary</vaadin-button>
             <vaadin-button theme="error">Secondary</vaadin-button>
             <vaadin-button theme="tertiary error">Tertiary</vaadin-button>
-            <vaadin-button theme="primary icon error"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="icon error"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary icon error"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="primary error"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Primary</vaadin-button>
-            <vaadin-button theme="error">Secondary <iron-icon icon="vaadin:search" slot="suffix"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary error"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Tertiary</vaadin-button>
+            <vaadin-button theme="primary icon error"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="icon error"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary icon error"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="primary error"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Primary</vaadin-button>
+            <vaadin-button theme="error">Secondary <vaadin-icon icon="vaadin:search" slot="suffix"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary error"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Tertiary</vaadin-button>
           </div>
           <div>
             <vaadin-button theme="primary success">Primary</vaadin-button>
             <vaadin-button theme="success">Secondary</vaadin-button>
             <vaadin-button theme="tertiary success">Tertiary</vaadin-button>
-            <vaadin-button theme="primary icon success"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="icon success"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary icon success"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="primary success"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Primary</vaadin-button>
-            <vaadin-button theme="success">Secondary <iron-icon icon="vaadin:search" slot="suffix"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary success"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Tertiary</vaadin-button>
+            <vaadin-button theme="primary icon success"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="icon success"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary icon success"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="primary success"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Primary</vaadin-button>
+            <vaadin-button theme="success">Secondary <vaadin-icon icon="vaadin:search" slot="suffix"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary success"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Tertiary</vaadin-button>
           </div>
           <div>
             <vaadin-button theme="primary contrast">Primary</vaadin-button>
             <vaadin-button theme="contrast">Secondary</vaadin-button>
             <vaadin-button theme="tertiary contrast">Tertiary</vaadin-button>
-            <vaadin-button theme="primary icon contrast"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="icon contrast"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary icon contrast"><iron-icon icon="vaadin:search"></iron-icon></vaadin-button>
-            <vaadin-button theme="primary contrast"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Primary</vaadin-button>
-            <vaadin-button theme="contrast">Secondary <iron-icon icon="vaadin:search" slot="suffix"></iron-icon></vaadin-button>
-            <vaadin-button theme="tertiary contrast"><iron-icon icon="vaadin:search" slot="prefix"></iron-icon> Tertiary</vaadin-button>
+            <vaadin-button theme="primary icon contrast"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="icon contrast"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary icon contrast"><vaadin-icon icon="vaadin:search"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="primary contrast"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Primary</vaadin-button>
+            <vaadin-button theme="contrast">Secondary <vaadin-icon icon="vaadin:search" slot="suffix"></vaadin-icon></vaadin-button>
+            <vaadin-button theme="tertiary contrast"><vaadin-icon icon="vaadin:search" slot="prefix"></vaadin-icon> Tertiary</vaadin-button>
           </div>
         </section>
         
@@ -261,8 +314,8 @@ export class ComponentView extends LitElement {
             <span theme="badge success">Confirmed</span>
             <span theme="badge error">Denied</span>
             <span theme="badge contrast">On hold</span>
-            <iron-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge success"></iron-icon>
-            <iron-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge error"></iron-icon>
+            <vaadin-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge success"></vaadin-icon>
+            <vaadin-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge error"></vaadin-icon>
             <span theme="badge">8</span>
           </div>
           <div>
@@ -270,8 +323,8 @@ export class ComponentView extends LitElement {
             <span theme="badge primary success">Confirmed</span>
             <span theme="badge primary error">Denied</span>
             <span theme="badge primary contrast">On hold</span>
-            <iron-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge primary success"></iron-icon>
-            <iron-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge primary error"></iron-icon>
+            <vaadin-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge primary success"></vaadin-icon>
+            <vaadin-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge primary error"></vaadin-icon>
             <span theme="badge primary">8</span>
           </div>
           <div>
@@ -279,8 +332,8 @@ export class ComponentView extends LitElement {
             <span theme="badge pill success">Confirmed</span>
             <span theme="badge pill error">Denied</span>
             <span theme="badge pill contrast">On hold</span>
-            <iron-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge pill success"></iron-icon>
-            <iron-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge pill error"></iron-icon>
+            <vaadin-icon icon="vaadin:check" style="padding: var(--lumo-space-xs)" theme="badge pill success"></vaadin-icon>
+            <vaadin-icon icon="vaadin:close-small" style="padding: var(--lumo-space-xs)" theme="badge pill error"></vaadin-icon>
             <span theme="badge pill">8</span>
           </div>
         </section>
@@ -409,7 +462,7 @@ export class ComponentView extends LitElement {
           <vaadin-notification .opened="${this.notificationOpened1}">
               <template>
                 <vaadin-horizontal-layout theme="spacing" style="align-items: center">
-                  <iron-icon icon="vaadin:check-circle" style="color: var(--lumo-success-color)"></iron-icon>
+                  <vaadin-icon icon="vaadin:check-circle" style="color: var(--lumo-success-color)"></vaadin-icon>
                   <div>
                     <b style="color: var(--lumo-success-text-color);">Upload successful</b>
                     <div style="font-size: var(--lumo-font-size-s); color: var(--lumo-secondary-text-color)">
@@ -417,7 +470,7 @@ export class ComponentView extends LitElement {
                     </div>
                   </div>
                   <vaadin-button theme="tertiary-inline" @click="${this.notificationOpened1 = false}" aria-label="Close">
-                    <iron-icon icon="lumo:cross"></iron-icon>
+                    <vaadin-icon icon="lumo:cross"></vaadin-icon>
                   </vaadin-button>
                 </vaadin-horizontal-layout>
               </template>
@@ -428,7 +481,7 @@ export class ComponentView extends LitElement {
                   <vaadin-avatar name="Jason Bailey"></vaadin-avatar>
                   <div><b>Jason Bailey</b> mentioned you in <a href="#">Project Q4</a></div>
                   <vaadin-button theme="tertiary-inline" @click="${this.notificationOpened2 = false}" aria-label="Close">
-                    <iron-icon icon="lumo:cross"></iron-icon>
+                    <vaadin-icon icon="lumo:cross"></vaadin-icon>
                   </vaadin-button>
                 </vaadin-horizontal-layout>
               </template>

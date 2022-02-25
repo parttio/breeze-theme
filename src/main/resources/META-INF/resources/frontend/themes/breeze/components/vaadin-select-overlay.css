@@ -1,0 +1,11 @@
+:host {
+    --lumo-border-radius-m: 0;
+}
+
+[part="overlay"] {
+    border-radius: 0.25em;
+}
+
+[part="content"] {
+    padding: 0;
+}
