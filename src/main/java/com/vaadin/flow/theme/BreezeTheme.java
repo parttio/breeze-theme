@@ -21,7 +21,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 
 @NpmPackage(value = "lumo-css-framework", version = "^4.0.10")
 @JsModule("@vaadin/charts/vaadin-chart-default-theme")
-@CssImport(value = "../src/main/resources/META-INF/resources/frontend/themes/breeze/vaadin-chart.css", themeFor = "vaadin-chart", include = "vaadin-chart-default-theme")
+@CssImport(value = "./themes/breeze/vaadin-chart.css", themeFor = "vaadin-chart", include = "vaadin-chart-default-theme")
 public class BreezeTheme {
     
 }
