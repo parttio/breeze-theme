@@ -6,9 +6,9 @@ Breeze is built on top of Lumo and heavily inspired by visual style of [Tailwind
 
 To install this add-on, check out the latest version and Maven/Gradle dependency snippets from the [Directory](https://vaadin.com/directory).
 
-Then change your theme annotation to use Breeze: `@Theme("breeze")´
+Then change your theme annotation to use Breeze: `@Theme("breeze")`
 
-To make changes on top of the Breeze theme, load project styles located in the "frontend" directory with `@CssImport("./themes/myapp/styles.css")´
+To make changes on top of the Breeze theme, load project styles located in the "frontend" directory with `@CssImport("./themes/myapp/styles.css")`
 
 ## Running the application
 
