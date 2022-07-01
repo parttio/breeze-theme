@@ -12,7 +12,6 @@ import com.vaadin.flow.router.Route;
 @Route(value = "charts", layout = MainLayout.class)
 @Tag("charts-view")
 @JsModule("./views/chartsview/charts-view.ts")
-@JsModule("@vaadin/vaadin-charts/theme/vaadin-chart-default-theme")
 public class ChartsView extends LitTemplate implements HasStyle {
 
 }
