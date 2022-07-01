@@ -85,7 +85,7 @@ export class ComponentView extends LitElement {
 
   render() {
     return html`
-      <vaadin-tabs style="background: white; position: sticky; top: 0; z-index: 1;">
+      <vaadin-tabs style="background: var(--lumo-base-color); position: sticky; top: 0; z-index: 1;">
         <vaadin-tab><a href="#inputs">Form inputs</a></vaadin-tab>
         <vaadin-tab><a href="#interaction">Navigation & interaction</a></vaadin-tab>
         <vaadin-tab><a href="#containers">Layouts & containers</a></vaadin-tab>

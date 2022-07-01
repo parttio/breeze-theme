@@ -1,6 +1,6 @@
 [part="input-field"] {
   box-shadow: var(--breeze-field-border), var(--breeze-field-shadow);
-  background-color: var(--lumo-base-color);
+  background-color: var(--breeze-field-background);
   color: var(--breeze-field-color);
 }
 
