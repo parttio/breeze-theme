@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addons.parttio</groupId>
     <artifactId>breeze-theme</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>Breeze theme for Vaadin</name>
     <description>Breeze is build on top of Lumo and heavily inspired by visual style of TailwindUI. It can be used in light or dark mode and contains a custom palette for Vaadin Charts.</description>
 
@@ -32,7 +32,7 @@
         <url>https://github.com/parttio/breeze-theme</url>
         <connection>scm:git:git://github.com/parttio/breeze-theme.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/parttio/breeze-theme.git</developerConnection>
-        <tag>breeze-theme-1.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
