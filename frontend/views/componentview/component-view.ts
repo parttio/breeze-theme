@@ -99,8 +99,8 @@ export class ComponentView extends LitElement {
           <vaadin-text-field label="Street Address" placeholder="Street or code" required></vaadin-text-field>
           <vaadin-text-field label="Street Address" helper-text="Street or code"></vaadin-text-field>
           <vaadin-text-field label="Street Address" invalid error-message="Not valid"></vaadin-text-field>
-          <vaadin-text-field label="Street Address" focused></vaadin-text-field>
-          <vaadin-text-field label="Street Address" focused focus-ring></vaadin-text-field>
+          <vaadin-text-field label="Street Address" readonly value="Ruukinkatu 2"></vaadin-text-field>
+          <vaadin-text-field label="Street Address" disabled value="Ruukinkatu 2"></vaadin-text-field>
           <vaadin-text-field label="Street Address" value="Ruukinkatu 2" clear-button-visible>
             <vaadin-icon slot="prefix" icon="vaadin:map-marker"></vaadin-icon>
           </vaadin-text-field>
@@ -112,8 +112,8 @@ export class ComponentView extends LitElement {
           <vaadin-text-area label="Street Address" placeholder="Street or code" required></vaadin-text-area>
           <vaadin-text-area label="Street Address" helper-text="Street or code"></vaadin-text-area>
           <vaadin-text-area label="Street Address" invalid error-message="Not valid"></vaadin-text-area>
-          <vaadin-text-area label="Street Address" focused></vaadin-text-area>
-          <vaadin-text-area label="Street Address" focused focus-ring></vaadin-text-area>
+          <vaadin-text-area label="Street Address" readonly value="Ruukinkatu 2"></vaadin-text-area>
+          <vaadin-text-area label="Street Address" disabled value="Ruukinkatu 2"></vaadin-text-area>
           <vaadin-text-area label="Street Address" value="Ruukinkatu 2" clear-button-visible>
             <vaadin-icon slot="prefix" icon="vaadin:map-marker"></vaadin-icon>
           </vaadin-text-area>
@@ -153,6 +153,7 @@ export class ComponentView extends LitElement {
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" value="Mozilla Firefox"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" placeholder="Pick one" helper-text="Most common browsers"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" invalid error-message="Not valid"></vaadin-combo-box>
+          <br>
           <vaadin-select label="Browser"
             .renderer="${guard(
                   [],() => (root: HTMLElement) => render(

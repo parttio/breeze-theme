@@ -9,11 +9,15 @@
   background-color: var(--lumo-error-color-10pct);
 }
 
-:host(:hover:not([invalid])) [part="input-field"] {
+:host(:hover:not([focused]):not([invalid]):not([readonly])) [part="input-field"] {
   --breeze-field-border: inset 0 0 0 1px var(--lumo-contrast-40pct);
   transition: box-shadow 200ms;
 }
 
 :host([focused]:not([invalid])) [part="input-field"] {
-  --breeze-field-border: inset 0 0 0 1px var(--lumo-primary-color-50pct);
+  --breeze-field-border: inset 0 0 0 1px var(--lumo-primary-color);
+}
+
+:host([readonly]) [part='input-field'] {
+    border: none;
 }

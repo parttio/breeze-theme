@@ -87,6 +87,10 @@ html[theme="dark"] {
     background-color: hsl(220, 15%, 14%);
 }
 
+*::selection {
+    background-color: hsla(241, 72%, 62%, 0.3);
+}
+
 /* Vaadin Select */
 vaadin-select vaadin-item[selected] {
     background-color: transparent;

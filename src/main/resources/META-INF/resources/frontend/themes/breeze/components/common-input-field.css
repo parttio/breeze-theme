@@ -5,7 +5,7 @@
 }
 
 :host([focus-ring]) [part="input-field"] {
-  box-shadow: 0 0 0 2px var(--lumo-primary-color-50pct), inset 0 0 0 1px var(--lumo-primary-color);
+  box-shadow: 0 0 0 1px var(--lumo-primary-color), inset 0 0 0 1px var(--lumo-primary-color);
 }
 
 :host([invalid]) [part="input-field"] {
@@ -14,11 +14,31 @@
 }
 
 :host([invalid][focus-ring]) [part="input-field"] {
-  box-shadow: 0 0 0 2px var(--lumo-error-color);
+  box-shadow: 0 0 0 1px var(--lumo-error-color), inset 0 0 0 1px var(--lumo-error-color);
 }
 
 :host([invalid]) [part="input-field"]::after {
   background-color: var(--lumo-error-color-25pct);
+}
+
+:host([readonly]) [part="input-field"] {
+  background-image: linear-gradient(var(--lumo-shade-5pct), var(--lumo-shade-5pct));
+}
+
+:host([readonly]) [part="input-field"]::after {
+  border: none;
+  opacity: 0;
+}
+
+:host([disabled]) [part="input-field"] {
+  --breeze-field-border: inset 0 0 0 1px var(--lumo-contrast-10pct);
+  --breeze-field-background: var(--lumo-contrast-10pct);
+}
+
+:host([disabled]) [part='label'],
+:host([disabled]) [part='input-field'] ::slotted(*) {
+  color: var(--lumo-secondary-text-color);
+  -webkit-text-fill-color: var(--lumo-secondary-text-color);
 }
 
 [part="input-field"]::after {
@@ -31,5 +51,5 @@
 }
 
 :host([focused]:not([invalid])) [part="input-field"] {
-  --breeze-field-border: inset 0 0 0 1px var(--lumo-primary-color-50pct);
+  --breeze-field-border: inset 0 0 0 1px var(--lumo-primary-color);
 }
