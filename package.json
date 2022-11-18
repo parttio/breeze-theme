@@ -144,15 +144,7 @@
     "webpack-merge": "4.2.2",
     "workbox-core": "6.5.0",
     "workbox-precaching": "6.5.0",
-    "workbox-webpack-plugin": "6.5.0",
-    "workbox-build": "6.5.0",
-    "@rollup/plugin-replace": "3.1.0",
-    "mkdirp": "1.0.4",
-    "vite": "v3.1.0",
-    "rollup-plugin-brotli": "3.1.0",
-    "@rollup/pluginutils": "4.1.0",
-    "vite-plugin-checker": "0.4.9",
-    "transform-ast": "2.4.4"
+    "workbox-webpack-plugin": "6.5.0"
   },
   "overrides": {
     "@polymer/iron-ajax": "$@polymer/iron-ajax",
@@ -417,15 +409,7 @@
       "webpack-merge": "4.2.2",
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0",
-      "workbox-webpack-plugin": "6.5.0",
-      "workbox-build": "6.5.0",
-      "@rollup/plugin-replace": "3.1.0",
-      "mkdirp": "1.0.4",
-      "vite": "v3.1.0",
-      "rollup-plugin-brotli": "3.1.0",
-      "@rollup/pluginutils": "4.1.0",
-      "vite-plugin-checker": "0.4.9",
-      "transform-ast": "2.4.4"
+      "workbox-webpack-plugin": "6.5.0"
     },
     "hash": "508809d0a57a88f66296f00d5ed0be8365c3333f69fb2eb11190765446b753f8"
   }
