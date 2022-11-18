@@ -15,6 +15,9 @@ Then update your frontend/themes/mytheme/theme.json to have parent configuration
 }
 ```
 
+You can still make your own changes on top in the applications theme.
+
+
 ## Running the application
 
 To run the project during development, run `mvn jetty:run`
