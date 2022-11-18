@@ -1,0 +1,4 @@
+:host {
+    color: var(--lumo-primary-text-color);
+    background-color: var(--lumo-primary-color-10pct);
+}

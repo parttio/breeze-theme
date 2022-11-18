@@ -92,6 +92,7 @@ html[theme="dark"] {
 }
 
 /* Vaadin Select */
+vaadin-select vaadin-select-item[selected],
 vaadin-select vaadin-item[selected] {
     background-color: transparent;
     color: var(--breeze-field-color);
@@ -110,4 +111,14 @@ vaadin-chart {
     --vaadin-charts-color-7: #F39D2A;
     --vaadin-charts-color-8: #B71F23;
     --vaadin-charts-color-9: #ED4649;
+}
+
+html {
+    --vaadin-user-color-0: #443FC7;
+    --vaadin-user-color-1: #646BEE;
+    --vaadin-user-color-2: #BC1E5E;
+    --vaadin-user-color-3: #EA4C99;
+    --vaadin-user-color-4: #117858;
+    --vaadin-user-color-5: #23B883;
+    --vaadin-user-color-6: #B2531A;
 }

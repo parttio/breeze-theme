@@ -1,17 +1,18 @@
 import {html, LitElement, render, customElement, state} from 'lit-element';
-import '@vaadin/vaadin-button';
-import '@vaadin/vaadin-checkbox';
-import '@vaadin/vaadin-combo-box';
-import '@vaadin/vaadin-icons';
-import '@vaadin/vaadin-select';
 import {guard} from 'lit/directives/guard.js';
-import '@vaadin/vaadin-text-field/vaadin-email-field';
-import '@vaadin/vaadin-text-field/vaadin-text-area';
-import '@vaadin/vaadin-text-field/vaadin-text-field';
-import '@vaadin/vaadin-app-layout/vaadin-app-layout';
-import '@vaadin/vaadin-app-layout/vaadin-drawer-toggle';
-import {MenuBarItem} from "@vaadin/vaadin-menu-bar/vaadin-menu-bar";
-import {ContextMenuItem} from "@vaadin/vaadin-context-menu/vaadin-context-menu";
+import '@vaadin/button';
+import '@vaadin/checkbox';
+import '@vaadin/combo-box';
+import '@vaadin/multi-select-combo-box';
+import '@vaadin/icons';
+import '@vaadin/select';
+import '@vaadin/email-field';
+import '@vaadin/text-area';
+import '@vaadin/text-field';
+import '@vaadin/app-layout';
+import '@vaadin/app-layout/vaadin-drawer-toggle';
+import {MenuBarItem} from "@vaadin/menu-bar";
+import {ContextMenuItem} from "@vaadin/context-menu";
 
 
 
@@ -148,11 +149,16 @@ export class ComponentView extends LitElement {
         </section>
         
         <section>
-          <h3>Combo Box & Select</h3>
+          <h3>Combo Box, Multi-Select Combo Box & Select</h3>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" value="Mozilla Firefox"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" placeholder="Pick one" helper-text="Most common browsers"></vaadin-combo-box>
           <vaadin-combo-box label="Browser" .items="${this.comboItems}" invalid error-message="Not valid"></vaadin-combo-box>
+          <br>
+          <vaadin-multi-select-combo-box label="Browser" .items="${this.comboItems}"></vaadin-multi-select-combo-box>
+          <vaadin-multi-select-combo-box label="Browser" .items="${this.comboItems}" .selectedItems="${this.comboItems.slice(0, 3)}"></vaadin-multi-select-combo-box>
+          <vaadin-multi-select-combo-box label="Browser" .items="${this.comboItems}" placeholder="Pick one" helper-text="Most common browsers"></vaadin-multi-select-combo-box>
+          <vaadin-multi-select-combo-box label="Browser" .items="${this.comboItems}" invalid error-message="Not valid"></vaadin-multi-select-combo-box>
           <br>
           <vaadin-select label="Browser"
             .renderer="${guard(
@@ -354,11 +360,23 @@ export class ComponentView extends LitElement {
         </section>
         
         <section>
-        <!-- TODO -->
           <h3>Avatar</h3>
           <vaadin-avatar></vaadin-avatar>
           <vaadin-avatar name="Jason Bailey"></vaadin-avatar>
           <vaadin-avatar img="https://randomuser.me/api/portraits/women/33.jpg"></vaadin-avatar>
+
+          <vaadin-avatar-group
+              .items="${[
+                  {name: "Alice Bradshaw", colorIndex: 0},
+                  {name: "Alice Salas", colorIndex: 1},
+                  {name: "Amanda Corcoran", colorIndex: 2},
+                  {name: "Alicia Starnes", colorIndex: 3},
+                  {name: "Eileen Noble", colorIndex: 4},
+                  {name: "Frank McMillan", colorIndex: 5},
+                  {name: "Kathleen Leach", colorIndex: 6},
+              ]}"
+          ></vaadin-avatar-group>
+          
         </section>
         
         <section>
@@ -366,6 +384,8 @@ export class ComponentView extends LitElement {
           <vaadin-progress-bar value="0.5"></vaadin-progress-bar>
           <vaadin-progress-bar indeterminate></vaadin-progress-bar>
         </section>
+        
+        <section></section>
         
         <hr>
         
@@ -490,14 +510,13 @@ export class ComponentView extends LitElement {
         </section>
 -->
         <section>
-          <!-- TODO -->
           <h3>Message List</h3>
           <vaadin-message-list
             .items="${[
                 {
                   text: 'Linsey, could you check if the details with the order are okay?',
                   userName: 'Matt Mambo',
-                  userColorIndex: 1,
+                  userColorIndex: 0,
                 },
                 {
                   text: 'All good. Ship it.',
@@ -514,7 +533,6 @@ export class ComponentView extends LitElement {
         </section>
         
         <section>
-          <!-- TODO -->
           <h3>Split Layout</h3>
           <vaadin-split-layout style="min-height: 300px;">
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat luctus tincidunt. Donec condimentum a eros sed placerat. Morbi non magna ut libero euismod condimentum.</span>
