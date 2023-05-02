@@ -3,6 +3,7 @@ package com.example.application.views;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.application.views.HomeView.HomeView;
 import com.example.application.views.chartsview.ChartsView;
 import com.example.application.views.formexampleview.FormExampleView;
 import com.vaadin.flow.component.Component;
@@ -94,13 +95,15 @@ public class MainLayout extends AppLayout {
 
     private List<RouterLink> createLinks() {
         MenuItemInfo[] menuItems = new MenuItemInfo[]{ //
+                new MenuItemInfo("Home", HomeView.class), //
+
+                new MenuItemInfo("Components", ComponentView.class), //
+
                 new MenuItemInfo("Master-Detail", MasterDetailView.class), //
 
                 new MenuItemInfo("Form Example", FormExampleView.class), //
 
-                new MenuItemInfo("Component View", ComponentView.class), //
-
-                new MenuItemInfo("Charts View", ChartsView.class), //
+                new MenuItemInfo("Charts", ChartsView.class), //
 
         };
         List<RouterLink> links = new ArrayList<>();

@@ -2,3 +2,8 @@
     color: var(--lumo-primary-text-color);
     background-color: var(--lumo-primary-color-10pct);
 }
+
+:host([part~='overflow'])::before,
+:host([part~='overflow'])::after {
+    border-color: var(--lumo-primary-color-10pct);
+}

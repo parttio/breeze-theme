@@ -9,7 +9,7 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @PageTitle("Component View")
-@Route(value = "", layout = MainLayout.class)
+@Route(value = "component-view", layout = MainLayout.class)
 @Tag("component-view")
 @JsModule("./views/componentview/component-view.ts")
 public class ComponentView extends LitTemplate implements HasStyle {

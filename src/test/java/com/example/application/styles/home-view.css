@@ -1,0 +1,18 @@
+.home-view {
+    background-color: var(--lumo-contrast-5pct);
+    padding: var(--lumo-space-l);
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.home-view .card {
+    background: var(--lumo-base-color);
+    padding: var(--lumo-space-l);
+    box-shadow: var(--lumo-box-shadow-xs);
+}
+
+@media screen and (max-width: 1200px) {
+    .home-view {
+        flex-wrap: wrap;
+    }
+}

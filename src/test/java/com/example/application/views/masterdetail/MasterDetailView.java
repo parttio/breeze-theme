@@ -96,7 +96,7 @@ public class MasterDetailView extends Div implements BeforeEnterObserver {
         grid.addColumn(importantRenderer).setHeader("Important").setAutoWidth(true);
 
         grid.setItems(SamplePersonRepository.get().findAll());
-        //grid.addThemeVariants(GridVariant.LUMO_NO_BORDER);
+        grid.addThemeVariants(GridVariant.LUMO_NO_BORDER);
         grid.addThemeVariants(GridVariant.LUMO_NO_ROW_BORDERS);
         grid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         grid.setHeightFull();
