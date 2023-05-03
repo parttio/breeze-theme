@@ -119,7 +119,7 @@
     </dependencies>
 
     <build>
-        <defaultGoal>jetty:run</defaultGoal>
+        <defaultGoal>exec:java</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -143,17 +143,19 @@
             </plugin>
 
             <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.28.v20200408</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <scanIntervalSeconds>-1</scanIntervalSeconds>
-                    <!-- Use test scope because the UI/test classes are in
-                        the test package. -->
-                    <useTestScope>true</useTestScope>
-                    <supportedPackagings>
-                        <supportedPackaging>jar</supportedPackaging>
-                    </supportedPackagings>
+                    <mainClass>com.example.application.Main</mainClass>
+                    <classpathScope>test</classpathScope>
                 </configuration>
             </plugin>
 

@@ -20,7 +20,8 @@ You can still make your own changes on top in the applications theme.
 
 ## Running the application
 
-To run the project during development, run `mvn jetty:run`
+To run the project during development, run the `Main.java` class from your IDE. Alternatively,
+run `mvn exec:java`.
 
 ## Cutting releases
 
