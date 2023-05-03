@@ -91,7 +91,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin</artifactId>
-            <scope>optional</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
