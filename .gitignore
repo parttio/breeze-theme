@@ -16,3 +16,4 @@ drivers/
 error-screenshots/
 webpack.generated.js
 frontend/generated
+package-lock.json
