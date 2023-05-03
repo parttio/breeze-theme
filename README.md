@@ -21,7 +21,7 @@ You can still make your own changes on top in the applications theme.
 ## Running the application
 
 To run the project during development, run the `Main.java` class from your IDE. Alternatively,
-run `mvn exec:java`.
+run `mvn exec:java -Dvaadin.webpackForFrontendBuild=true`.
 
 ## Cutting releases
 
