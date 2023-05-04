@@ -17,6 +17,7 @@ RUN cp -r src/test/java/* src/main/java/
 # 2. Turn all test dependencies into compile deps, so that test files copied to src/main/java/ are compilable.
 RUN sed -i 's_<scope>test</scope>_<!-- -->_g' pom.xml
 # 3. Finally, build the app
+ARG offlinekey
 ENV VAADIN_OFFLINE_KEY=$offlinekey
 RUN ./mvnw -C clean package -Pproduction -Dvaadin.webpackForFrontendBuild=true -DskipTests
 # Prepare a folder with dependencies
